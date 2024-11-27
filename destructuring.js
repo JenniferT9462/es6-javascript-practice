@@ -15,9 +15,9 @@ console.log(secondColor); // Output: green
 
 // Example 2: Destructure an object to extract properties
 // const user = { name: "Alice", age: 25 };
-const user = { name: "Alice", age: 25 };
-const { name, age } = user;
-console.log(name); // Output: Alice
+const user = { userName: "Alice", age: 25 };
+const { userName, age } = user;
+console.log(userName); // Output: Alice
 console.log(age); // Output: 25
 
 // Example 3: Destructure with default values
@@ -51,10 +51,10 @@ console.log(a)
 console.log(b)
 
 // 4. Destructure the following object to extract the name and city properties
-const person = { name2: "John", city: "New York", zip: "10001" };
+const person = { personName: "John", city: "New York", zip: "10001" };
 // // Your code here
-const { name2, city } = person;
-console.log(name2);
+const { personName, city } = person;
+console.log(personName);
 console.log(city);
 // 5. Destructure an array and use the rest operator to collect the remaining elements
 const numbers = [10, 20, 30, 40, 50];
