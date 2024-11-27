@@ -56,6 +56,8 @@ console.log(isOdd(13)); //Output should be true
 // function findMax(arr) {
 //     // Your code here
 // }
+
+//?Should I use 'apply' or 'reduce' instead of the spread operator?
 let numbers = [2, 5, 7, 9]
 const findMax = (arr) => Math.max(...arr);
 console.log(findMax(numbers)) //Output should be 9
