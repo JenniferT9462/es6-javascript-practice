@@ -30,24 +30,37 @@ console.log(language); // Output: English
 // Exercises
 
 // 1. Destructure the following array to get the first, second, and third elements
-// const fruits = ["apple", "banana", "cherry", "date"];
+const fruits = ["apple", "banana", "cherry", "date"];
 // // Your code here
-
+const [first, second, third] = fruits;
+console.log(first);
+console.log(second);
+console.log(third);
 // 2. Destructure the following object to extract the title and author properties
-// const book = { title: "1984", author: "George Orwell", year: 1949 };
+const book = { title: "1984", author: "George Orwell", year: 1949 };
 // // Your code here
-
+const {title, author} = book;
+console.log(title);
+console.log(author);
 // 3. Use destructuring to swap the values of two variables
-// let a = 1;
-// let b = 2;
+let a = 1;
+let b = 2;
 // // Your code here
+[a, b] = [b, a]
+console.log(a)
+console.log(b)
 
 // 4. Destructure the following object to extract the name and city properties
-// const person = { name: "John", city: "New York", zip: "10001" };
+const person = { name2: "John", city: "New York", zip: "10001" };
 // // Your code here
-
+const { name2, city } = person;
+console.log(name2);
+console.log(city);
 // 5. Destructure an array and use the rest operator to collect the remaining elements
-// const numbers = [10, 20, 30, 40, 50];
+const numbers = [10, 20, 30, 40, 50];
 // // Your code here
-
+const [firstNum, secondNum, ...rest] = numbers;
+console.log(firstNum);
+console.log(secondNum);
+console.log(rest);
 // Solutions should be written directly below each TODO comment.
