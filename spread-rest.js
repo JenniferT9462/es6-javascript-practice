@@ -65,5 +65,5 @@ function add(a, b, c) {
  }
 // // Your code here
 const result = add(...numbers);
-console.log(result);
+console.log(result); //Output should be 30
 // Solutions should be written directly below each TODO comment.
