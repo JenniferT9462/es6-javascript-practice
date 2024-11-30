@@ -37,24 +37,24 @@
 // Exercises
 
 // 1. Create a function that fetches data from the PokeAPI and resolves with "Data fetched successfully!" if the fetch is successful
- async function fetchData() {
+ function fetchData() {
      // Your code here
      fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
         .then((response) => response.json())
         .then((data) => {
             console.log('\nExercise 1:', data);
-            resolve('Fetched data successfully!')
+            console.log('Fetched data successfully!')
         })
         .catch((error) => console.error("Example 1 - Error fetching data:", error));
 
  }
 fetchData()
- .then((message) => {
-    console.log(message)
- })
+//  .then((message) => {
+//     console.log(message)
+//  })
 
 // 2. Write a function that tries to fetch an unknown Pokemon from the PokeAPI and rejects with an error message "Fetch failed!" if it doesn't exist
-async function fetchWithError() {
+function fetchWithError() {
      // Your code here
      fetch ('https://pokeapi.co/api/v2/pokemon/unknown')
         .then((response) => {
@@ -68,7 +68,7 @@ async function fetchWithError() {
 }
 fetchWithError();
 // 3. Fetch data from the PokeAPI, and then use the ID of the Pokemon to fetch another related resource
-async function chainPromises() {
+function chainPromises() {
      // Your code here
     fetch('https://pokeapi.co/api/v2/pokemon/luxio')
         .then((response) => response.json())
@@ -89,7 +89,7 @@ chainPromises()
         fetch('https://pokeapi.co/api/v2/pokemon/charmander')
             .then((response) => response.json())
             .then((data) => {
-                console.log(data);
+                console.log("Exercise 4 Data:", data);
                 resolve('Promise complete!');
             })
      }, 1000)
@@ -98,7 +98,7 @@ promiseComplete.then((message) => {
     console.log(message);
 })
 // 5. Write a function that fetches a Pokemon from the PokeAPI and checks if the ID is even; resolves if it is, rejects if it is odd
-async function checkEvenNumber(pokemonName) {
+ function checkEvenNumber(pokemonName) {
      // Your code here
      return new Promise((resolve, reject) => {
         fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
